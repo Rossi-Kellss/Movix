@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react-router-dom'
+
+import { useState, useEffect } from 'react'
 
 import { fetchFromApi } from '../utils/api'
 
-export default useFetch = () => {
+const useFetch = (url) => {
     const [loading, setLoading] = useState(null);
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
-    useEffect(() => {
+    useEffect((url) => {
         setLoading(true);
         setData(null);
         setError(null);
@@ -27,4 +28,5 @@ export default useFetch = () => {
 
 
 }
+export default useFetch;
 

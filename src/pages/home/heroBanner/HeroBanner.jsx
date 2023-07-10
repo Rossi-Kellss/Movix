@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import{ React,  useState }from 'react'
 import "./style.scss"
 import { useNavigate } from 'react-router-dom';
+import useFetch from '../../../hooks/useFetch'
 
 const HeroBanner = () => {
+    const data=useFetch("/movie/upcoming");
+    console.log(data);
+
     const [query,setQuery]=useState('');
     const navigate=useNavigate();
     const searchQueryFinder=(e)=>{
