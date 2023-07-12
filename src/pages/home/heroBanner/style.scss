@@ -1,0 +1,114 @@
+@import '../../../mixins.scss';
+// @import '../../../index.scss';
+
+
+.heroBanner{
+    width: 100%;
+    height: 450px;
+    background: --var(black);
+    display: flex;
+    align-items: center;
+    // border: 2px solid black;
+    position: relative;
+    @include md{
+       
+        height: 700px;
+    }
+    .backgroundImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        opacity: 0.5;
+        width: 100%;
+        
+        // border: 2px solid white;
+        height: 100%;
+        .lazy-load-image-background{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .opactiy-layer{
+        width: 100%;
+        height: 250px;
+        // background:--var(black2) ;
+        opacity:0.3;
+        // background-color: white;
+        
+        
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+
+    .herobannerContent{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        .title{
+            font-size: 50px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            @include md{
+                margin-bottom: 0;
+                font-size: 90px;
+            }
+        }
+        .subtitle{
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            @include md{
+                font-size: 24px;
+            }
+        }
+
+        .searchInput{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+            input{
+                width: calc(100% - 100px);
+                height: 50px;
+                outline: 0;
+                border: 0;
+                border-radius: 30px 0 0 30px;
+                padding: 0 15px;
+                font-size: 14px;
+            }
+            @include md{
+                width: calc(100% - 150px);
+                height: 60px;
+                font-size: 20px;
+                padding: 0 30px;
+            }
+            button{
+                width: 100px;
+                height: 50px;
+                background: transparent;
+                color: white;
+                outline: 0;
+                border: 0;
+                cursor: pointer;
+                // background-color:rgb(0, 0, 0) ;
+                background: linear-gradient(98.37deg, #f89e00 0.99%, #da2f68 100%);
+                margin-left: 3px;
+                border-radius: 0px 30px 30px 0px;
+                // border-radius: 3px;
+            }
+        }
+    }
+
+   
+}
